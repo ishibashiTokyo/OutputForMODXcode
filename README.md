@@ -1,0 +1,2 @@
+# OutputForMODXcode
+MODX EvolutionのDB内に格納されているスニペット、モジュール、プラグインのコードをファイル出力
