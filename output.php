@@ -14,15 +14,15 @@ $snippet_codes = $db->getSnippetsCode();
 $plugin_codes = $db->getPluginsCode();
 
 foreach($module_codes as $module) {
-    file_put_contents(__DIR__ . '/' . $module['name'].'.module.php', $module['modulecode']);
+    file_put_contents(__DIR__ . '/' . $module['name'].'.module.php', "<?php\n" . $module['modulecode']);
 }
 
 foreach($snippet_codes as $snippet) {
-    file_put_contents(__DIR__ . '/' . $snippet['name'].'.snippet.php', $snippet['snippet']);
+    file_put_contents(__DIR__ . '/' . $snippet['name'].'.snippet.php', "<?php\n" . $snippet['snippet']);
 }
 
 foreach($plugin_codes as $plugin) {
-    file_put_contents(__DIR__ . '/' . $plugin['name'].'.plugin.php', $plugin['plugincode']);
+    file_put_contents(__DIR__ . '/' . $plugin['name'].'.plugin.php', "<?php\n" . $plugin['plugincode']);
 }
 
 
